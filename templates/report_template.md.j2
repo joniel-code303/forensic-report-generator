@@ -1,0 +1,17 @@
+# Reporte Forense - Caso {{ metadata.case_id }}
+
+**Investigador:** {{ metadata.investigator }}  
+**Fecha:** {{ metadata.creation_time }}  
+
+## Hallazgos ({{ findings|length }})
+{% for finding in findings %}
+### ⚠️ {{ finding.category }} (Severidad: {{ finding.severity }}/5)
+- **Descripción:** {{ finding.description }}  
+- **Fuente:** {{ finding.source }}  
+- **Evidencia:** `{{ finding.evidence[:50] }}...`  
+{% endfor %}
+
+## Línea de Tiempo
+{% for event in timeline %}
+- **{{ event.timestamp }}**: {{ event.event }} ({{ event.source }})  
+{% endfor %}
