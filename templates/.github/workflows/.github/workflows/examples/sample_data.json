@@ -1,0 +1,13 @@
+[
+  {
+    "timestamp": "2023-01-01T12:00:00Z",
+    "event_type": "login",
+    "user": "admin",
+    "source_ip": "192.168.1.1"
+  },
+  {
+    "timestamp": "2023-01-01T12:05:00Z",
+    "event_type": "error",
+    "message": "Intento de acceso fallido"
+  }
+]
